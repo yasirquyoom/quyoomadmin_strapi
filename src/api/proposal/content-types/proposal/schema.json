@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "employees",
+  "collectionName": "proposals",
   "info": {
-    "singularName": "employee",
-    "pluralName": "employees",
-    "displayName": "Employee"
+    "singularName": "proposal",
+    "pluralName": "proposals",
+    "displayName": "Proposal"
   },
   "options": {
     "draftAndPublish": true
@@ -15,18 +15,6 @@
     }
   },
   "attributes": {
-    "EID": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "minLength": 12,
-      "maxLength": 12,
-      "required": true,
-      "unique": true
-    },
     "Name": {
       "type": "string",
       "pluginOptions": {
@@ -36,41 +24,14 @@
       },
       "required": true
     },
-    "Position": {
-      "type": "string",
+    "Email": {
+      "type": "email",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "required": true
-    },
-    "Bio": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "Profile": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "multiple": false,
-      "allowedTypes": [
-        "files",
-        "images"
-      ]
-    },
-    "department": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::department.department"
     },
     "Country": {
       "type": "string",
@@ -81,7 +42,7 @@
       },
       "required": true
     },
-    "City": {
+    "Company": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -89,29 +50,20 @@
         }
       },
       "required": true
-    },
-    "Email": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true,
-      "unique": true
     },
     "Phone": {
-      "type": "string",
+      "type": "biginteger",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "required": true,
-      "unique": true
+      "min": "10",
+      "max": "14"
     },
-    "Joined": {
-      "type": "date",
+    "Budget": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -119,14 +71,43 @@
       },
       "required": true
     },
-    "Left": {
-      "type": "date",
+    "Timeline": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": false
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "minLength": 10,
+      "maxLength": 5000
+    },
+    "Communication_app": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
