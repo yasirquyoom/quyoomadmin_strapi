@@ -22,8 +22,7 @@
           "localized": true
         }
       },
-      "minLength": 12,
-      "maxLength": 12,
+      "minLength": 20,
       "required": true,
       "unique": true
     },

@@ -25,6 +25,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::blog.blog"
+    },
+    "plans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::plan.plan",
+      "mappedBy": "category"
     }
   }
 }
