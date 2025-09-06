@@ -31,6 +31,25 @@
       "relation": "oneToMany",
       "target": "api::plan.plan",
       "mappedBy": "category"
+    },
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
