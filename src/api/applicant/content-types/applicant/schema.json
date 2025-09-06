@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "reviews",
+  "collectionName": "applicants",
   "info": {
-    "singularName": "review",
-    "pluralName": "reviews",
-    "displayName": "Review"
+    "singularName": "applicant",
+    "pluralName": "applicants",
+    "displayName": "Applicant"
   },
   "options": {
     "draftAndPublish": true
@@ -24,7 +24,20 @@
       },
       "required": true
     },
-    "Content": {
+    "Resume": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Description": {
       "type": "richtext",
       "pluginOptions": {
         "i18n": {
@@ -33,29 +46,27 @@
       },
       "required": true
     },
-    "Profile": {
-      "type": "media",
+    "Email": {
+      "type": "email",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
+      "required": true
     },
-    "slug": {
-      "type": "uid",
+    "Phone": {
+      "type": "biginteger",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "targetField": "Name"
+      "required": true,
+      "min": "10",
+      "max": "14"
     },
-    "Position": {
+    "Experience": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -64,16 +75,7 @@
       },
       "required": true
     },
-    "Date": {
-      "type": "date",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "Country": {
+    "Role": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

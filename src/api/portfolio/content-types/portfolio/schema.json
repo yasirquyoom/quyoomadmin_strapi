@@ -54,6 +54,14 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "portfolios"
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
