@@ -49,12 +49,6 @@
         "audios"
       ]
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "portfolios"
-    },
     "slug": {
       "type": "uid",
       "pluginOptions": {
@@ -62,6 +56,12 @@
           "localized": true
         }
       }
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "portfolios"
     }
   }
 }

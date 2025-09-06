@@ -34,21 +34,22 @@
       },
       "required": true
     },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "category"
+    },
     "portfolios": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::portfolio.portfolio",
       "mappedBy": "category"
     },
-    "blogs": {
+    "services": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::blog.blog"
-    },
-    "plans": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::plan.plan",
+      "target": "api::service.service",
       "mappedBy": "category"
     }
   }
