@@ -55,7 +55,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "targetField": "Title"
     },
     "category": {
       "type": "relation",

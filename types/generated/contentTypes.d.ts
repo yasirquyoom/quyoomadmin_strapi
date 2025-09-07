@@ -1215,7 +1215,7 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID &
+    slug: Schema.Attribute.UID<'Title'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
